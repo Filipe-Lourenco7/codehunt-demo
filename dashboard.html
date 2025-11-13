@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Shopee Demo</title>
+    <style>
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial;
+            padding: 20px;
+        }
+        .box {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ff6a00;
+        }
+        button {
+            background: #ff6a00;
+            padding: 10px 20px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            background: #222;
+            color: white;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Code Hunt — Shopee Integration Demo</h1>
+    <p>Welcome Shopee reviewer! This is a test environment to demonstrate our platform.</p>
+
+    <div class="box">
+        <h3>Simulated Product Fetch</h3>
+        <button onclick="loadTable()">Fetch Products</button>
+
+        <table id="table" style="display:none;">
+            <tr><th>ID</th><th>Name</th><th>Price</th></tr>
+        </table>
+    </div>
+
+    <script>
+        function loadTable() {
+            let table = document.getElementById("table");
+            table.style.display = "table";
+
+            table.innerHTML += `
+                <tr><td>101</td><td>Wireless Mouse</td><td>39.90</td></tr>
+                <tr><td>102</td><td>USB LED Light</td><td>19.90</td></tr>
+                <tr><td>103</td><td>Bluetooth Speaker</td><td>89.90</td></tr>
+            `;
+        }
+    </script>
+
+</body>
+</html>
